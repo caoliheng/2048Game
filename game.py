@@ -22,24 +22,29 @@ class Game:
             # TODO convert 1D (length 16) board into 2D board (4x4)
             self.board = board
 
-        self.generation = generation
+        self.generation = generation  # number of new numbers to add on each move
 
     def move(direction: Direction) -> None:
         pass
 
     def generate(self) -> None:
         # generate {self.generation} number of values (for now, just the value 2) into random empty (value 0) spaces
+        zeros = 0 
+        for r in self.board:
+            for c in r:
+                zeros += c == 0
+
+        
         pass
 
     def __str__(self) -> str:
-        # str is "informal" representation
+        # str is "informal" representation, whatever that means
         pass
 
     def __repr__(self) -> str:
-        # repr is "formal" representation
-        pass
+        # repr is "formal" representation, whatever that means
+        return f""
 
 
 if __name__ == "__main__":
-    # TODO generate random board
     pass
