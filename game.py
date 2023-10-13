@@ -72,8 +72,8 @@ class Game:
         """
         # TODO
         print("Use 'quit' to quit. Valid commands are 'up', 'down', 'left', and 'right'.")
-        while command := input() != "quit":
-            print(f"{command} zzz")
+        while (command := input()) != "quit":
+            print(f"{command=}")
 
             match command:
                 case "up":
