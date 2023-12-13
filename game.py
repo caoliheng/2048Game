@@ -16,14 +16,16 @@ class Game:
 
     # str direction to int di, dj (like dx, dy, but accounting for matrix indexing direction)
     DIRECTIONS: dict[str, tuple[int, int]] = {
-    "up": (-1, 0), "down": (1, 0), "left": (0, -1), "right": (0, 1)}
+        "up": (-1, 0), "down": (1, 0), "left": (0, -1), "right": (0, 1)
+    }
 
     # TODO variable board size
     BOARD_SIZE = 4, 4
 
-    def __init__(self, board: Optional[list[list[int]]]=None) -> None:
+    def __init__(self, board: Optional[list[list[int]]] = None) -> None:
         if not board:  # use default board
-            self.board = [[0 for _ in range(Game.BOARD_SIZE[0])] for _ in range(Game.BOARD_SIZE[1])]
+            self.board = [[0 for _ in range(Game.BOARD_SIZE[0])]
+                          for _ in range(Game.BOARD_SIZE[1])]
 
             self.board[0][0] = Game.NEW_TILE_VALUE
         else:
